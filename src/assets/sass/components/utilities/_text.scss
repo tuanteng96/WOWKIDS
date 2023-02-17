@@ -1,0 +1,39 @@
+// Theme Colors
+// @each $name,
+// $color in $theme-text-colors {
+//     // Base color
+//     .text-#{$name} {
+//         color: $color !important;
+//     }
+// }
+//
+// @each $name,
+// $size in $config-font-size {
+//     // Base color
+//     .font-#{$name} {
+//         font-size: $size !important;
+//     }
+// }
+//
+@each $name,
+$config in $config-text {
+    // Base text
+    @include createClasses($config);
+}
+
+// 
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@for $count from 2 through 15 {
+    .text-truncate-#{$count} {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: $count;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+}

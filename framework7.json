@@ -1,0 +1,19 @@
+{
+  "cwd": "E:\\App\\WowKids",
+  "type": [
+    "web"
+  ],
+  "name": "WOW Kids",
+  "framework": "react",
+  "template": "single-view",
+  "bundler": "vite",
+  "cssPreProcessor": "scss",
+  "theming": {
+    "customColor": true,
+    "color": "#444fa0",
+    "darkTheme": false,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false
+}
