@@ -51,6 +51,16 @@ const MyApp = () => {
     },
     on: {
       init: function () {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        var wI = 1120;
+        var hI = 512;
+        var nH = (w * hI) / wI;
+       document.documentElement.style.setProperty(
+         "--height-image-bg",
+         `${nH}px`
+       );
+        
         console.log("App initialized");
       },
       pageInit: function () {
