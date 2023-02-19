@@ -8,11 +8,14 @@
 @import "./init";
 // 2: Components
 @import "./components/utilities",
+"./components/form",
 "./components/page",
 "./components/wrap",
-"./components/navbar";
+"./components/navbar",
+"./components/button";
 // 3: Layout
 @import "./layout/init";
 // 4: Plugins
-@import "./vendors/plugins/react-toastify";
+@import "./vendors/plugins/react-toastify", "./vendors/plugins/perfect-scrollbar";
 // 5: Page
+@import "./pages/init";

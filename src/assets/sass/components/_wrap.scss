@@ -3,9 +3,6 @@
     box-sizing: border-box;
     position: relative;
     height: 100%;
-    img {
-        width: 100%;
-    }
     .wrapper-icon {
         position: absolute;
         top: 0;
@@ -18,7 +15,7 @@
             display: flex;
             li {
                 img {
-                    max-width: 50px;
+                    max-width: 55px;
                 }
             }
         }
@@ -28,15 +25,25 @@
         top: 0;
         left: 0;
         width: 100%;
-        padding: 3% 20% 0 30%;
+        padding: 3% 20% 15px 30%;
         box-sizing: border-box;
         height: 100%;
+        display: flex;
+        flex-direction: column;
     }
     .wrapper-title {
         text-transform: uppercase;
         font-size: 17px;
         font-weight: 700;
         color: var(--f7-theme-color);
-        padding: 10px 0 10px 10px;
+        padding: 12px 0 12px 12px;
+    }
+    .wrap-icon-cate {
+        position: absolute;
+        left: 7%;
+        bottom: 18%;
+        img {
+            width: 110px;
+        }
     }
 }

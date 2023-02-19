@@ -1,5 +1,5 @@
 import HomePage from "../pages/Home/index.jsx";
-import AboutPage from "../pages/about.jsx";
+import ProfilePage from "../pages/Auth/Profile.jsx";
 import FormPage from "../pages/form.jsx";
 
 import DynamicRoutePage from "../pages/dynamic-route.jsx";
@@ -51,8 +51,8 @@ var routes = [
     },
   },
   {
-    path: "/about/",
-    component: AboutPage,
+    path: "/profile/",
+    component: ProfilePage,
   },
   {
     path: "/form/",
