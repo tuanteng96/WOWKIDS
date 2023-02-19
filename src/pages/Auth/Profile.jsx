@@ -42,7 +42,7 @@ function Profile(props) {
                   </div>
                 </Col>
               </Row>
-              <Row className="mb-12px ai--c">
+              <Row className="mb-15px ai--c">
                 <Col width="30">
                   <div className="label-title">Hạn đăng ký gói</div>
                 </Col>
