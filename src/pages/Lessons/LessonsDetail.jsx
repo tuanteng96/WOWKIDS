@@ -1,21 +1,15 @@
 import React, { useRef, useState } from "react";
 import {
   Page,
-  Link,
-  Row,
-  Col,
   Icon,
   Swiper,
   SwiperSlide,
   Sheet,
   PageContent,
-  BlockTitle,
-  Block,
 } from "framework7-react";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import NavbarCustom from "../../components/Navbar/NavbarCustom";
 import "video-react/dist/video-react.css";
-import { Player } from "video-react";
 
 const perfectScrollbarOptions = {
   wheelSpeed: 1,
@@ -23,17 +17,17 @@ const perfectScrollbarOptions = {
 };
 
 const LessonsDetail = (props) => {
-  const { f7router } = props;
+  const { f7router, f7route } = props;
   const [opened, setOpened] = useState(false);
   const refVideo = useRef();
 
   const openVideos = () => {
-    //refVideo?.current.play();
+    refVideo?.current.play();
     setOpened(true);
   };
   const hideVideos = () => {
-    // refVideo?.current.pause();
-    // refVideo?.current.load();
+    refVideo?.current.pause();
+    refVideo?.current.load();
     setOpened(false);
   };
 
@@ -109,7 +103,10 @@ const LessonsDetail = (props) => {
           <div className="wrap-back" onClick={() => f7router.back()}>
             <img src="/media/icon-app/ic_back.png" />
           </div>
-          <div className="wrap-next" onClick={() => f7router.navigate()}>
+          <div
+            className="wrap-next"
+            onClick={() => f7router.navigate(f7route.path + '1' + '/')}
+          >
             Học trực tuyến
             <Icon
               className="pl-5px"
@@ -128,23 +125,14 @@ const LessonsDetail = (props) => {
         opened={opened}
       >
         <PageContent>
-          {/* <Player
-            playsInline
-            className="w-100 h-100 p-0"
-            poster="/assets/poster.png"
-            src="https://wowedu.net/Data/5-7/Phong-tranh-xam-hai-tinh-duc/video/intro.mp4"
-            fluid={false}
-          /> */}
           <video
             className="w-100 h-100 position-absolute top-0 left-0"
             controls
             ref={refVideo}
             controlsList="nodownload"
-            autoPlay
-            muted
           >
             <source
-              src="https://wowedu.net/Data/5-7/Phong-tranh-xam-hai-tinh-duc/video/intro.mp4"
+              src="https://wowedu.net/Data/5-7/Phong-tranh-xam-hai-tinh-duc/video/T1.mp4"
               type="video/mp4"
             />
             <source src="movie.ogg" type="video/ogg" />

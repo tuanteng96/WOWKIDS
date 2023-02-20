@@ -5,3 +5,52 @@
         font-size: 13px;
     }
 }
+
+.page-detail-view {
+    background: #000000;
+    .page-content {
+        padding-bottom: 0 !important;
+    }
+    .detail-view-content {
+        box-sizing: border-box;
+        padding: 15px;
+    }
+    .view-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        &__col {
+            padding: 0 15px;
+            height: var(--f7-image-view-width);
+        }
+        &__item {
+            height: 100%;
+            img {
+                max-height: 100%;
+            }
+            &.current-view {
+                animation-name: flicker;
+                animation-duration: 1s;
+                animation-timing-function: linear;
+                animation-delay: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+                animation-play-state: running;
+            }
+        }
+    }
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
