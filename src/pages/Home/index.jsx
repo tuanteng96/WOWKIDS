@@ -8,9 +8,9 @@ const perfectScrollbarOptions = {
   wheelPropagation: false,
 }
 
-const HomePage = () => (
+const HomePage = (props) => (
   <Page name="home" noNavbar noToolbar>
-    <NavbarCustom />
+    <NavbarCustom {...props} />
     {/* Page content */}
     <div className="wrapper-content d--f ai--c">
       <div className="position-relative m-auto">
@@ -35,11 +35,11 @@ const HomePage = () => (
           <div className="wrapper-title">Danh sách khóa học</div>
           <PerfectScrollbar
             options={perfectScrollbarOptions}
-            className="scroll fg--1"
+            className="scroll scroll-hidden fg--1"
           >
             <Row>
               <Col width="33">
-                <Link href="/" className="learning-item fd--c mb-25px">
+                <Link href="/lesson/1/" className="learning-item fd--c mb-25px">
                   <div className="learning-item__img">
                     <img
                       className="w-100"
@@ -53,7 +53,7 @@ const HomePage = () => (
                 </Link>
               </Col>
               <Col width="33">
-                <Link href="/" className="learning-item fd--c mb-25px">
+                <Link href="/lesson/1/" className="learning-item fd--c mb-25px">
                   <div className="learning-item__img">
                     <img
                       className="w-100"
@@ -67,7 +67,7 @@ const HomePage = () => (
                 </Link>
               </Col>
               <Col width="33">
-                <Link href="/" className="learning-item fd--c mb-25px">
+                <Link href="/lesson/1/" className="learning-item fd--c mb-25px">
                   <div className="learning-item__img">
                     <img
                       className="w-100"
@@ -81,7 +81,7 @@ const HomePage = () => (
                 </Link>
               </Col>
               <Col width="33">
-                <Link href="/" className="learning-item fd--c mb-25px">
+                <Link href="/lesson/1/" className="learning-item fd--c mb-25px">
                   <div className="learning-item__img">
                     <img
                       className="w-100"
@@ -95,7 +95,7 @@ const HomePage = () => (
                 </Link>
               </Col>
               <Col width="33">
-                <Link href="/" className="learning-item fd--c mb-25px">
+                <Link href="/lesson/1/" className="learning-item fd--c mb-25px">
                   <div className="learning-item__img">
                     <img
                       className="w-100"
@@ -109,7 +109,7 @@ const HomePage = () => (
                 </Link>
               </Col>
               <Col width="33">
-                <Link href="/" className="learning-item fd--c mb-25px">
+                <Link href="/lesson/1/" className="learning-item fd--c mb-25px">
                   <div className="learning-item__img">
                     <img
                       className="w-100"
@@ -129,5 +129,5 @@ const HomePage = () => (
       </div>
     </div>
   </Page>
-)
+);
 export default HomePage

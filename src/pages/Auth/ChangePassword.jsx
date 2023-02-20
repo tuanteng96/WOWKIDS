@@ -3,57 +3,66 @@ import React from 'react'
 import NavbarCustom from '../../components/Navbar/NavbarCustom'
 import NavbarProfile from '../../components/Navbar/NavbarProfile'
 
-function Profile(props) {
+function ChangePassword(props) {
   return (
-    <Page name="profile" noNavbar noToolbar>
+    <Page name="change-password" noNavbar noToolbar>
       <NavbarCustom {...props} />
       <div className="wrapper-content">
         <div className="page-profile">
-          <div className="profile-top">
-            <img className='m-auto' src="/media/icon-app/ic_xin_chao.png" />
+          <div className="profile-top mb-8px">
+            <img
+              className="m-auto max-w-180px"
+              src="/media/icon-app/ic_dmk.png"
+            />
           </div>
           <div className="profile-content">
-            <div className="profile-title">Thông tin cá nhân</div>
+            {/* <div className="profile-title">Thay đổi mật khẩu</div> */}
             <div>
-              <Row className="mb-12px ai--c">
-                <Col width="30">
-                  <div className="label-title">Họ và tên</div>
+              <Row className="mb-15px ai--c">
+                <Col width="35">
+                  <div className="label-title">Mật khẩu cũ</div>
                 </Col>
-                <Col width="70">
+                <Col width="65">
                   <div>
                     <Input
-                      type="text"
-                      placeholder="Họ và tên"
+                      type="password"
+                      placeholder="Nhập mật khẩu cũ"
                       value="Nguyễn Tài Tuấn"
                     />
                   </div>
                 </Col>
               </Row>
               <Row className="mb-15px ai--c">
-                <Col width="30">
-                  <div className="label-title">Số điện thoại</div>
+                <Col width="35">
+                  <div className="label-title">Mật khẩu mới</div>
                 </Col>
-                <Col width="70">
+                <Col width="65">
                   <div>
                     <Input
-                      type="number"
-                      placeholder="Số điện thoại"
+                      type="password"
+                      placeholder="Nhập mật khẩu mới"
                       value="0971021196"
                     />
                   </div>
                 </Col>
               </Row>
               <Row className="mb-15px ai--c">
-                <Col width="30">
-                  <div className="label-title">Hạn đăng ký gói</div>
+                <Col width="35">
+                  <div className="label-title">Nhập lại mật khẩu mới</div>
                 </Col>
-                <Col width="70">
-                  <div className="label-text">Chưa đăng ký gói</div>
+                <Col width="65">
+                  <div>
+                    <Input
+                      type="password"
+                      placeholder="Nhập lại mật khẩu mới"
+                      value="0971021196"
+                    />
+                  </div>
                 </Col>
               </Row>
               <Row className="ai--c">
-                <Col width="30"></Col>
-                <Col width="70">
+                <Col width="35"></Col>
+                <Col width="65">
                   <Button className="d--if" raised fill round color="orange">
                     Cập nhập thông tin
                   </Button>
@@ -65,7 +74,7 @@ function Profile(props) {
         </div>
       </div>
     </Page>
-  )
+  );
 }
 
-export default Profile
+export default ChangePassword
