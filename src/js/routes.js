@@ -3,6 +3,7 @@ import ProfilePage from "../pages/Auth/Profile.jsx";
 import ChangePasswordPage from "../pages/Auth/ChangePassword.jsx";
 import LessonsDetailPage from "../pages/Lessons/LessonsDetail.jsx";
 import LessonsViewsPage from "../pages/Lessons/LessonsViews.jsx";
+import LessonsStartPage from "../pages/Lessons/LessonsStart.jsx";
 
 import DynamicRoutePage from "../pages/dynamic-route.jsx";
 import RequestAndLoad from "../pages/request-and-load.jsx";
@@ -67,6 +68,12 @@ var routes = [
       {
         path: ":lessonId/",
         component: LessonsViewsPage,
+        routes: [
+          {
+            path: ":startId/",
+            component: LessonsStartPage,
+          }
+        ]
       },
     ],
   },

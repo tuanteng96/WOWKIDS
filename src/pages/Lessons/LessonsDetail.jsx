@@ -9,7 +9,6 @@ import {
 } from "framework7-react";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import NavbarCustom from "../../components/Navbar/NavbarCustom";
-import "video-react/dist/video-react.css";
 
 const perfectScrollbarOptions = {
   wheelSpeed: 1,

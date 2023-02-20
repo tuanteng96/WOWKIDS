@@ -1,17 +1,23 @@
-import React from "react";
-import { Col, Page, Row } from "framework7-react";
+import React from 'react'
+import { Icon, Page } from 'framework7-react'
 
 const getHeightView = (count) => {
   if (count <= 2) {
-    return "80%";
+    return '80%'
   } else if (count === 3) {
-    return "46%";
+    return '46%'
   } else {
-    return "50%";
+    return '50%'
   }
-};
+}
 
 function LessonsViews(props) {
+  const {f7router, f7route} = props
+  
+  const handleClick = () => {
+    f7router.navigate(f7route.path + '1' + '/')
+  }
+
   return (
     <Page
       className="page-detail-view"
@@ -19,6 +25,9 @@ function LessonsViews(props) {
       noNavbar
       noToolbar
     >
+      <div className="position-absolute w-60px h-60px d--f ai--c jc--c text-white opacity-90" onClick={() => f7router.back()}>
+        <Icon f7="arrow_left" size="38px"></Icon>
+      </div>
       <div className="w-100 h-100 text-center">
         <div className="h-100 d-inline-block position-relative">
           <img
@@ -27,16 +36,16 @@ function LessonsViews(props) {
           />
           <div
             className="detail-view-content position-absolute w-100 h-100 top-0 left-0 d--f jc--c ai--c"
-            style={{ "--f7-image-view-width": getHeightView(2) }}
+            style={{ '--f7-image-view-width': getHeightView(2) }}
           >
             <div className="view-list">
               <div className="view-list__col">
-                <div className="view-list__item current-view">
+                <div className="view-list__item current-view" onClick={() => handleClick()}>
                   <img src="https://wowedu.net/Upload/image/2021/09/21/tiet-1_2021-09-21-174416.png" />
                 </div>
               </div>
               <div className="view-list__col">
-                <div className="view-list__item">
+                <div className="view-list__item" onClick={() => handleClick()}>
                   <img src="https://wowedu.net/Upload/image/2021/09/21/tiet-2_2021-09-21-174631.png" />
                 </div>
               </div>
@@ -87,7 +96,7 @@ function LessonsViews(props) {
         </div>
       </div>
     </Page>
-  );
+  )
 }
 
-export default LessonsViews;
+export default LessonsViews

@@ -1,11 +1,11 @@
-// Theme Colors
-// @each $name,
-// $color in $theme-text-colors {
-//     // Base color
-//     .text-#{$name} {
-//         color: $color !important;
-//     }
-// }
+//Theme Colors
+@each $name,
+$color in $theme-text-colors {
+    // Base color
+    .text-#{$name} {
+        color: $color !important;
+    }
+}
 //
 // @each $name,
 // $size in $config-font-size {
