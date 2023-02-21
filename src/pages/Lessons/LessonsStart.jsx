@@ -127,6 +127,7 @@ var Acts = [
 
 function LessonsStart(props) {
   const { f7router } = props;
+  const [audioPage] = useState(new Audio("https://wowedu.net/Data/5-7/Phong-tranh-xam-hai-tinh-duc/mp3/t1.mp3"));
   const [openedIfame, setOpenedIfame] = useState(false);
   const [openedVideo, setOpenedVideo] = useState(false);
   const refVideo = useRef();
@@ -134,6 +135,16 @@ function LessonsStart(props) {
   useEffect(() => {
     openVideos();
   }, []);
+
+  useEffect(() => {
+    if(!openedVideo && !openedIfame) {
+        audioPage?.play()
+        audioPage.loop = true
+    }
+    else {
+        audioPage?.pause()
+    }
+  },[openedIfame, openedVideo])
 
   const openIframes = () => {
     setOpenedIfame(true);
@@ -158,6 +169,7 @@ function LessonsStart(props) {
       name="page-detail-view"
       noNavbar
       noToolbar
+      onPageAfterOut={() => audioPage?.pause()}
     >
       <div
         className="clickSound position-absolute w-60px h-60px d--f ai--c jc--c text-white opacity-90"

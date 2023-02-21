@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { f7ready, App, View } from "framework7-react";
+import { f7ready, App, View, f7 } from "framework7-react";
 
 import routes from "../js/routes";
 import store from "../js/store";
@@ -31,6 +31,9 @@ const MyApp = () => {
       // change default "OK" button text
       buttonOk: "OK",
       buttonCancel: "Đóng",
+    },
+    notification: {
+      closeTimeout: 1000000,
     },
     on: {
       init: function () {
@@ -64,6 +67,24 @@ const MyApp = () => {
 
   f7ready(() => {
     // Call F7 APIs here
+    // f7.notification
+    //   .create({
+    //     title: "Vui lòng thanh toán để có thể học bài tiếp theo!",
+    //     subtitle: "abc",
+    //     icon: '<img src="/media/icon-app/ic_package1.png" />',
+    //     text: "Vui lòng đăng nhập để học bài tiếp theo.",
+    //     cssClass: "notification-error",
+    //     closeOnClick: true,
+    //     on: {
+    //       opened: function () {
+    //         console.log('Notification opened')
+    //       },
+    //       click: () => {
+    //         console.log('Notification click')
+    //       }
+    //     }
+    //   })
+    //   .open();
   });
 
   return (
