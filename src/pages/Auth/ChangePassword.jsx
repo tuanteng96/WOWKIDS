@@ -28,6 +28,7 @@ function ChangePassword(props) {
                       type="password"
                       placeholder="Nhập mật khẩu cũ"
                       value="Nguyễn Tài Tuấn"
+                      clearButton
                     />
                   </div>
                 </Col>
@@ -42,6 +43,7 @@ function ChangePassword(props) {
                       type="password"
                       placeholder="Nhập mật khẩu mới"
                       value="0971021196"
+                      clearButton
                     />
                   </div>
                 </Col>
@@ -56,6 +58,7 @@ function ChangePassword(props) {
                       type="password"
                       placeholder="Nhập lại mật khẩu mới"
                       value="0971021196"
+                      clearButton
                     />
                   </div>
                 </Col>

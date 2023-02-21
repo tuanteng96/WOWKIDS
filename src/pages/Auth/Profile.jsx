@@ -25,6 +25,7 @@ function Profile(props) {
                       type="text"
                       placeholder="Họ và tên"
                       value="Nguyễn Tài Tuấn"
+                      clearButton
                     />
                   </div>
                 </Col>
@@ -39,6 +40,7 @@ function Profile(props) {
                       type="number"
                       placeholder="Số điện thoại"
                       value="0971021196"
+                      clearButton
                     />
                   </div>
                 </Col>
