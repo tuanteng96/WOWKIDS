@@ -24,7 +24,7 @@ function NavbarProfile({ f7route, ...props }) {
           <Link
             href={item.Url}
             className={clsx(
-              "profile-tabs__item d-block",
+              "clickSound profile-tabs__item d-block",
               f7route.path === item.Url && "active"
             )}
             key={index}

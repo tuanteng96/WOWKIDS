@@ -12,10 +12,12 @@
 "./components/page",
 "./components/wrap",
 "./components/navbar",
-"./components/button";
+"./components/button",
+"./components/dialog";
 // 3: Layout
 @import "./layout/init";
 // 4: Plugins
-@import "./vendors/plugins/react-toastify", "./vendors/plugins/perfect-scrollbar";
+@import "./vendors/plugins/react-toastify",
+"./vendors/plugins/perfect-scrollbar";
 // 5: Page
 @import "./pages/init";

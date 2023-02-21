@@ -5,6 +5,8 @@ import LessonsDetailPage from "../pages/Lessons/LessonsDetail.jsx";
 import LessonsViewsPage from "../pages/Lessons/LessonsViews.jsx";
 import LessonsStartPage from "../pages/Lessons/LessonsStart.jsx";
 
+import LoginPage from "../pages/Auth/Login.jsx"
+
 import DynamicRoutePage from "../pages/dynamic-route.jsx";
 import RequestAndLoad from "../pages/request-and-load.jsx";
 import NotFoundPage from "../pages/404.jsx";
@@ -76,6 +78,10 @@ var routes = [
         ]
       },
     ],
+  },
+  {
+    path: "/login/",
+    component: LoginPage,
   },
   {
     path: "/dynamic-route/blog/:blogId/post/:postId/",

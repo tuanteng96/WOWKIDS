@@ -25,8 +25,11 @@ function LessonsViews(props) {
       noNavbar
       noToolbar
     >
-      <div className="position-absolute w-60px h-60px d--f ai--c jc--c text-white opacity-90" onClick={() => f7router.back()}>
-        <Icon f7="arrow_left" size="38px"></Icon>
+      <div
+        className="position-absolute w-60px h-60px d--f ai--c jc--c text-white opacity-90 clickSound"
+        onClick={() => f7router.back()}
+      >
+        <Icon f7="arrow_left" size="32px"></Icon>
       </div>
       <div className="w-100 h-100 text-center">
         <div className="h-100 d-inline-block position-relative">
@@ -36,17 +39,26 @@ function LessonsViews(props) {
           />
           <div
             className="detail-view-content position-absolute w-100 h-100 top-0 left-0 d--f jc--c ai--c"
-            style={{ '--f7-image-view-width': getHeightView(2) }}
+            style={{ "--f7-image-view-width": getHeightView(2) }}
           >
             <div className="view-list">
               <div className="view-list__col">
-                <div className="view-list__item current-view" onClick={() => handleClick()}>
-                  <img src="https://wowedu.net/Upload/image/2021/09/21/tiet-1_2021-09-21-174416.png" />
+                <div
+                  className="view-list__item current-view"
+                  onClick={() => handleClick()}
+                >
+                  <img
+                    className="clickSound"
+                    src="https://wowedu.net/Upload/image/2021/09/21/tiet-1_2021-09-21-174416.png"
+                  />
                 </div>
               </div>
               <div className="view-list__col">
                 <div className="view-list__item" onClick={() => handleClick()}>
-                  <img src="https://wowedu.net/Upload/image/2021/09/21/tiet-2_2021-09-21-174631.png" />
+                  <img
+                    className="clickSound"
+                    src="https://wowedu.net/Upload/image/2021/09/21/tiet-2_2021-09-21-174631.png"
+                  />
                 </div>
               </div>
 
@@ -96,7 +108,7 @@ function LessonsViews(props) {
         </div>
       </div>
     </Page>
-  )
+  );
 }
 
 export default LessonsViews

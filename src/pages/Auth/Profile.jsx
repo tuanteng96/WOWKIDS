@@ -54,7 +54,7 @@ function Profile(props) {
               <Row className="ai--c">
                 <Col width="30"></Col>
                 <Col width="70">
-                  <Button className="d--if" raised fill round color="orange">
+                  <Button className="d--if clickSound" raised fill round color="orange">
                     Cập nhập thông tin
                   </Button>
                 </Col>

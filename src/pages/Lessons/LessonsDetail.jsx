@@ -56,7 +56,10 @@ const LessonsDetail = (props) => {
           <div className="wrapper-list">
             <div className="wrapper-title-detail">
               <div className="detail-title">Phòng chống xâm hại tình dục</div>
-              <div className="detail-btn-video" onClick={() => openVideos()}>
+              <div
+                className="detail-btn-video clickSound"
+                onClick={() => openVideos()}
+              >
                 <Icon f7="videocam_fill" color="orange" />
                 Xem video giới thiệu
               </div>
@@ -99,12 +102,12 @@ const LessonsDetail = (props) => {
               </SwiperSlide>
             </Swiper>
           </div>
-          <div className="wrap-back" onClick={() => f7router.back()}>
+          <div className="wrap-back clickSound" onClick={() => f7router.back()}>
             <img src="/media/icon-app/ic_back.png" />
           </div>
           <div
-            className="wrap-next"
-            onClick={() => f7router.navigate(f7route.path + '1' + '/')}
+            className="wrap-next clickSound"
+            onClick={() => f7router.navigate(f7route.path + "1" + "/")}
           >
             Học trực tuyến
             <Icon
@@ -116,28 +119,32 @@ const LessonsDetail = (props) => {
         </div>
       </div>
       <Sheet
-        className="demo-sheet-swipe-to-close"
         style={{ height: "100%", "--f7-sheet-bg-color": "#222" }}
         swipeToClose
         backdrop
         onSheetClosed={() => hideVideos()}
         opened={opened}
       >
-        <PageContent>
-          <video
-            className="w-100 h-100 position-absolute top-0 left-0"
-            controls
-            ref={refVideo}
-            controlsList="nodownload"
-          >
-            <source
-              src="https://wowedu.net/Data/5-7/Phong-tranh-xam-hai-tinh-duc/video/T1.mp4"
-              type="video/mp4"
-            />
-            <source src="movie.ogg" type="video/ogg" />
-            Your browser does not support the video tag.
-          </video>
-        </PageContent>
+        <div
+          className="position-absolute top-0 left-0 w-70px h-70px zindex-10 d--f ai--c jc--c clickSound"
+          onClick={() => hideVideos()}
+        >
+          <img className="w-40px" src="/media/icon-app/ic-close.png" />
+        </div>
+        <video
+          className="w-100 h-100 position-absolute top-0 left-0"
+          controls
+          ref={refVideo}
+          controlsList="nodownload"
+          playsInline
+        >
+          <source
+            src="https://wowedu.net/Data/5-7/Phong-tranh-xam-hai-tinh-duc/video/T1.mp4"
+            type="video/mp4"
+          />
+          <source src="movie.ogg" type="video/ogg" />
+          Your browser does not support the video tag.
+        </video>
       </Sheet>
     </Page>
   );

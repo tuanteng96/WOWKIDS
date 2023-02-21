@@ -13,12 +13,33 @@ $positon-key: (top, left, right, bottom) !default;
         }
     }
 }
+
 .position-fixed {
     position: fixed !important;
 }
+
 .position-relative {
     position: relative !important;
 }
+
 .position-absolute {
     position: absolute !important;
+}
+
+//
+.position-x-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.position-y-center {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//
+@for $count from 1 through 15 {
+    .zindex-#{$count} {
+        z-index: $count;
+    }
 }

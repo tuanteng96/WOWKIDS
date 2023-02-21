@@ -23,26 +23,31 @@ export default function NavbarCustom({ f7route, ...props }) {
       <div className="logo-navbar">
         <img src="/media/logos/logo.png" />
       </div>
-      <ul className="m-0 p-0 d--f">
-        {PagePath &&
-          PagePath.map((item, index) => (
-            <li key={index}>
-              <Link
-                className={clsx(f7route.path === item.Url && "active")}
-                href={item.Url}
-              >
-                <img src={item.IconUrl} />
-                <img className="active" src={item.ActiveIconUrl} />
-              </Link>
-            </li>
-          ))}
-        <li>
-          <Link href="/">
-            <img src="/media/icon-app/ic_logout.png" />
-            <img className="active" src="/media/icon-app/ic_logout1.png" />
-          </Link>
-        </li>
-      </ul>
+      {
+        <ul className="m-0 p-0 d--f">
+          {PagePath &&
+            PagePath.map((item, index) => (
+              <li key={index}>
+                <Link
+                  className={clsx(
+                    "clickSound",
+                    f7route.path === item.Url && "active"
+                  )}
+                  href={item.Url}
+                >
+                  <img src={item.IconUrl} />
+                  <img className="active" src={item.ActiveIconUrl} />
+                </Link>
+              </li>
+            ))}
+          <li>
+            <Link className="clickSound" href="/">
+              <img src="/media/icon-app/ic_logout.png" />
+              <img className="active" src="/media/icon-app/ic_logout1.png" />
+            </Link>
+          </li>
+        </ul>
+      }
     </div>
   );
 }

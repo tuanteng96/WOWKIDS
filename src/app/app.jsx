@@ -1,19 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
-import {
-  f7ready,
-  App,
-  View
-} from "framework7-react";
+import { f7ready, App, View } from "framework7-react";
 
 import routes from "../js/routes";
 import store from "../js/store";
-import Mp3Click from '../assets/media/mp3/mp3-click.wav';
-import useSound from "use-sound";
 
+import Mp3Click from "../assets/media/mp3/mp3-click.mp3";
+
+var audio = new Audio(Mp3Click);
 
 const MyApp = () => {
-  const [playClick] = useSound(Mp3Click);
+  //const [audio, setAudio] = useState(new Audio(Mp3Click));
 
   // Framework7 Parameters
   const f7params = {
@@ -27,8 +24,7 @@ const MyApp = () => {
     // App routes
     routes: routes,
     clicks: {
-      externalLinks: '.external',
-      playClick: playClick
+      externalLinks: ".external",
     },
     dialog: {
       title: "WOW Kids",
@@ -40,8 +36,20 @@ const MyApp = () => {
       init: function () {
         console.log("App initialized");
       },
-      pageInit: function () {
+      pageInit: function (e) {
         console.log("Page initialized");
+        //audio.load();
+      },
+      click: function ({ target, ...e }) {
+        audio.load();
+        if (
+          (target?.className && target?.className.includes("clickSound")) ||
+          (target?.offsetParent?.className &&
+            target.offsetParent.className.includes("clickSound")) ||
+          (target?.className && target?.className.includes("dialog-button"))
+        ) {
+          audio.play();
+        }
       },
     },
     view: {
@@ -51,7 +59,7 @@ const MyApp = () => {
     },
     touch: {
       activeState: true,
-    }
+    },
   };
 
   f7ready(() => {

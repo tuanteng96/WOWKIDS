@@ -1,0 +1,23 @@
+$color-dialog: ("warning": #FFA800, "error": #F64E60);
+.dialog {
+    .dialog-title+.dialog-text {
+        margin-top: 8px;
+    }
+    &-text {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &-button {
+        &:first-child {
+            color: #333;
+        }
+    }
+    @each $name,
+    $value in $color-dialog {
+        &-#{$name} {
+            .dialog-text {
+                color: $value
+            }
+        }
+    }
+}

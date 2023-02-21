@@ -9,6 +9,27 @@ const perfectScrollbarOptions = {
 }
 
 const HomePage = (props) => {
+  const { f7router } = props;
+  const checkLogin = () => {
+    f7.dialog
+      .create({
+        text: "Vui lòng đăng nhập để học bài tiếp theo.",
+        cssClass: "dialog-error",
+        closeByBackdropClick: "true",
+        buttons: [
+          {
+            text: "Hủy",
+          },
+          {
+            text: "Đồng ý",
+            onClick: function () {
+              f7router.navigate("/login/");
+            },
+          },
+        ],
+      })
+      .open();
+  }
   return (
     <Page name="home" noNavbar noToolbar>
       <NavbarCustom {...props} />
@@ -42,7 +63,7 @@ const HomePage = (props) => {
                 <Col width="33">
                   <Link
                     href="/lesson/1/"
-                    className="learning-item fd--c mb-25px"
+                    className="clickSound learning-item fd--c mb-25px"
                   >
                     <div className="learning-item__img">
                       <img
@@ -58,8 +79,8 @@ const HomePage = (props) => {
                 </Col>
                 <Col width="33">
                   <Link
-                    href="/lesson/1/"
-                    className="learning-item fd--c mb-25px"
+                    onClick={() => checkLogin()}
+                    className="clickSound learning-item fd--c mb-25px"
                   >
                     <div className="learning-item__img">
                       <img
@@ -76,7 +97,7 @@ const HomePage = (props) => {
                 <Col width="33">
                   <Link
                     href="/lesson/1/"
-                    className="learning-item fd--c mb-25px"
+                    className="clickSound learning-item fd--c mb-25px"
                   >
                     <div className="learning-item__img">
                       <img
@@ -93,7 +114,7 @@ const HomePage = (props) => {
                 <Col width="33">
                   <Link
                     href="/lesson/1/"
-                    className="learning-item fd--c mb-25px"
+                    className="clickSound learning-item fd--c mb-25px"
                   >
                     <div className="learning-item__img">
                       <img
@@ -110,7 +131,7 @@ const HomePage = (props) => {
                 <Col width="33">
                   <Link
                     href="/lesson/1/"
-                    className="learning-item fd--c mb-25px"
+                    className="clickSound learning-item fd--c mb-25px"
                   >
                     <div className="learning-item__img">
                       <img
@@ -127,7 +148,7 @@ const HomePage = (props) => {
                 <Col width="33">
                   <Link
                     href="/lesson/1/"
-                    className="learning-item fd--c mb-25px"
+                    className="clickSound learning-item fd--c mb-25px"
                   >
                     <div className="learning-item__img">
                       <img
@@ -150,6 +171,6 @@ const HomePage = (props) => {
         </div>
       </div>
     </Page>
-  )
+  );
 }
 export default HomePage

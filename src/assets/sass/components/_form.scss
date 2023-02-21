@@ -6,5 +6,40 @@
         padding: 10px 16px;
         font-weight: 700;
         color: #5b5b5b;
+        &.input-focused {
+            border: 1px solid var(--f7-theme-color);
+            box-shadow: 0px 2px 0 0 var(--f7-theme-color);
+        }
+    }
+    .input-clear-button {
+        width: 40px;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        &::after {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.input-wrap-icon {
+    position: relative;
+    i.icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 12px;
+        pointer-events: none;
+        font-size: 20px;
+        color: #b8cfdf;
+    }
+    .input {
+        input {
+            padding: 10px 16px 10px 45px;
+        }
     }
 }

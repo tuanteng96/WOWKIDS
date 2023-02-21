@@ -1,4 +1,4 @@
-import { Button, Col, Input, Link, Page, Row } from 'framework7-react'
+import { Button, Col, Input, Page, Row } from 'framework7-react'
 import React from 'react'
 import NavbarCustom from '../../components/Navbar/NavbarCustom'
 import NavbarProfile from '../../components/Navbar/NavbarProfile'
@@ -63,8 +63,8 @@ function ChangePassword(props) {
               <Row className="ai--c">
                 <Col width="35"></Col>
                 <Col width="65">
-                  <Button className="d--if" raised fill round color="orange">
-                    Cập nhập thông tin
+                  <Button className="d--if clickSound" raised fill round color="orange">
+                    Thay đổi mật khẩu
                   </Button>
                 </Col>
               </Row>

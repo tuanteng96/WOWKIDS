@@ -6,6 +6,7 @@ $color in $theme-text-colors {
         color: $color !important;
     }
 }
+
 //
 // @each $name,
 // $size in $config-font-size {
@@ -35,5 +36,12 @@ $config in $config-text {
         -webkit-line-clamp: $count;
         display: -webkit-box;
         -webkit-box-orient: vertical;
+    }
+}
+
+//
+@for $count from 3 through 7 {
+    .fw-#{$count * 100} {
+        font-weight: #{$count * 100};
     }
 }
