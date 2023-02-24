@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { f7ready, App, View, f7 } from "framework7-react";
+import { f7ready, App, View } from "framework7-react";
 
 import routes from "../js/routes";
 import store from "../js/store";
@@ -38,6 +38,24 @@ const MyApp = () => {
     on: {
       init: function () {
         console.log("App initialized");
+        //
+        const heightNavbar = 57;
+        document.documentElement.style.setProperty(
+          "--f7-safe-area-navbar",
+          heightNavbar + "px"
+        );
+        const { width, height } = {
+          width: window.innerWidth,
+          height: window.innerHeight - heightNavbar,
+        };
+        const wIMG = 1120;
+        const hIMG = 512;
+        if (width / height < wIMG / hIMG) {
+          document.documentElement.style.setProperty("--width-image", "100%");
+        } else {
+          document.documentElement.style.setProperty("--height-image", "100%");
+        }
+        //
       },
       pageInit: function (e) {
         console.log("Page initialized");
