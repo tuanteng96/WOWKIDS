@@ -24,7 +24,7 @@ function Login(props) {
               <Link className="fw-700 text-underline">Quên mật khẩu?</Link>
             </div>
           </div>
-          <div className="page-login__footer d--f">
+          <div className="page-login__footer d--f w-100">
             <Button
               className="d--if text-capitalize clickSound f--1 mr-10px"
               raised

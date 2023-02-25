@@ -1,6 +1,5 @@
 .wrapper-content {
-    // padding: var(--f7-navbar-custom-height) calc(var(--f7-navbar-custom-height) + var(--f7-safe-area-bottom)) 0 calc(var(--f7-navbar-custom-height) + var(--f7-safe-area-bottom));
-    padding: var(--f7-navbar-custom-height) 15px 0 15px;
+    padding: var(--f7-wrapper-padding-top,0) var(--f7-wrapper-pading-right,0) var(--f7-wrapper-pading-bottom,0) var(--f7-wrapper-pading-left,0);
     box-sizing: border-box;
     position: relative;
     height: 100%;
@@ -136,7 +135,7 @@
         animation-direction: normal;
         animation-play-state: running;
         i {
-            font-size: 22px;
+            font-size: 15px;
         }
     }
 }
@@ -146,7 +145,7 @@
         transform: translateX(0);
     }
     75% {
-        transform: translateX(-6px);
+        transform: translateX(-3px);
     }
     100% {
         transform: translateX(0);

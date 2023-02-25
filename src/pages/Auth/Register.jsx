@@ -25,7 +25,7 @@ function Register(props) {
               <Input type="text" placeholder="Mật khẩu" clearButton />
             </div>
           </div>
-          <div className="page-login__footer d--f">
+          <div className="page-login__footer d--f w-100">
             <Button
               className="d--if text-capitalize clickSound f--1 mr-10px"
               raised

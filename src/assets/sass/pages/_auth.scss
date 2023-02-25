@@ -1,8 +1,15 @@
 .page-profile {
     position: relative;
     padding-left: 72px;
-    max-width: 600px;
+    max-width: 635px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
     .profile-top {
         margin-top: 0px;
         margin-bottom: 0px;
@@ -16,6 +23,8 @@
         border: 5px solid var(--f7-theme-color);
         padding: 16px 50px 20px 95px;
         position: relative;
+        width: 100%;
+        box-sizing: border-box;
         .profile-title {
             text-transform: uppercase;
             color: var(--f7-theme-color);
@@ -76,6 +85,11 @@
 .page-login {
     max-width: 450px;
     margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     &__title {
         max-width: 180px;
         margin: 0 auto;
@@ -88,6 +102,8 @@
         margin-bottom: 10px;
         position: relative;
         z-index: 1;
+        width: 100%;
+        box-sizing: border-box;
         &::before {
             content: "";
             position: absolute;

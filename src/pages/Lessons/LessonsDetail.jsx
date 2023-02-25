@@ -111,7 +111,7 @@ const LessonsDetail = (props) => {
           Học trực tuyến
           <Icon
             className="pl-5px"
-            f7="arrowshape_turn_up_right_2"
+            f7="chevron_right_2"
             color="white"
           />
         </div>
