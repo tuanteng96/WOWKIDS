@@ -1,10 +1,11 @@
 import { Button, Icon, Input, Link, Page } from "framework7-react";
 import React from "react";
 import NavbarCustom from "../../components/Navbar/NavbarCustom";
+import { ImagesHelpers } from "../../helpers/ImagesHelpers";
 
 function Login(props) {
   return (
-    <Page name="login" noNavbar noToolbar>
+    <Page name="login" noNavbar noToolbar style={{ backgroundImage: `url(${ImagesHelpers.BackgroundApp})` }}>
       <div className="wrapper-content">
         <NavbarCustom {...props} />
         <div className="page-login">

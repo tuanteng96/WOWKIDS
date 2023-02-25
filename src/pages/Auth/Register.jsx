@@ -1,10 +1,16 @@
 import { Button, Icon, Input, Link, Page } from "framework7-react";
 import React from "react";
 import NavbarCustom from "../../components/Navbar/NavbarCustom";
+import { ImagesHelpers } from "../../helpers/ImagesHelpers";
 
 function Register(props) {
   return (
-    <Page name="login" noNavbar noToolbar>
+    <Page
+      name="login"
+      noNavbar
+      noToolbar
+      style={{ backgroundImage: `url(${ImagesHelpers.BackgroundApp})` }}
+    >
       <div className="wrapper-content">
         <NavbarCustom {...props} />
         <div className="page-login">
@@ -12,7 +18,7 @@ function Register(props) {
             <img className="w-100" src="/media/icon-app/ic_register.png" />
           </div>
           <div className="page-login__content">
-          <div className="mb-12px input-wrap-icon">
+            <div className="mb-12px input-wrap-icon">
               <Icon f7="person_fill"></Icon>
               <Input type="text" placeholder="Họ và tên" clearButton />
             </div>
@@ -31,6 +37,7 @@ function Register(props) {
               raised
               fill
               round
+              href="/login/"
             >
               Đã có tài khoản?
               <span className="text-underline pl-5px">Đăng nhập ngay!</span>

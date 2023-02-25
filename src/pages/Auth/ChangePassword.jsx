@@ -2,14 +2,20 @@ import { Button, Col, Input, Page, Row } from 'framework7-react'
 import React from 'react'
 import NavbarCustom from '../../components/Navbar/NavbarCustom'
 import NavbarProfile from '../../components/Navbar/NavbarProfile'
+import { ImagesHelpers } from '../../helpers/ImagesHelpers';
 
 function ChangePassword(props) {
   return (
-    <Page name="change-password" noNavbar noToolbar>
+    <Page
+      name="change-password"
+      noNavbar
+      noToolbar
+      style={{ backgroundImage: `url(${ImagesHelpers.BackgroundApp})` }}
+    >
       <NavbarCustom {...props} />
-      <div className="wrapper-content">
+      <div className="wrapper-content pl-15px pr-15px">
         <div className="page-profile">
-          <div className="profile-top mb-8px">
+          <div className="profile-top mb-6px">
             <img
               className="m-auto max-w-180px"
               src="/media/icon-app/ic_dmk.png"
@@ -66,7 +72,13 @@ function ChangePassword(props) {
               <Row className="ai--c">
                 <Col width="35"></Col>
                 <Col width="65">
-                  <Button className="d--if clickSound" raised fill round color="orange">
+                  <Button
+                    className="d--if clickSound"
+                    raised
+                    fill
+                    round
+                    color="orange"
+                  >
                     Thay đổi mật khẩu
                   </Button>
                 </Col>

@@ -10,6 +10,7 @@ import {
 import PerfectScrollbar from "react-perfect-scrollbar";
 import NavbarCustom from "../../components/Navbar/NavbarCustom";
 import HomeLayout from "../../layout/HomeLayout";
+import { ImagesHelpers } from "../../helpers/ImagesHelpers";
 
 const perfectScrollbarOptions = {
   wheelSpeed: 1,
@@ -32,7 +33,12 @@ const LessonsDetail = (props) => {
   };
 
   return (
-    <Page name="page-detail" noNavbar noToolbar>
+    <Page
+      name="page-detail"
+      noNavbar
+      noToolbar
+      style={{ backgroundImage: `url(${ImagesHelpers.BackgroundApp})` }}
+    >
       <NavbarCustom {...props} />
       {/* Page content */}
       <HomeLayout>
@@ -109,11 +115,7 @@ const LessonsDetail = (props) => {
           onClick={() => f7router.navigate(f7route.path + "1" + "/")}
         >
           Học trực tuyến
-          <Icon
-            className="pl-5px"
-            f7="chevron_right_2"
-            color="white"
-          />
+          <Icon className="pl-5px" f7="chevron_right_2" color="white" />
         </div>
       </HomeLayout>
 

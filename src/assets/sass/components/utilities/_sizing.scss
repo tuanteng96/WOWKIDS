@@ -43,3 +43,12 @@ $value in $heights-and-widths {
         max-width: $value !important;
     }
 }
+
+//
+.ratio-1-1 {
+    aspect-ratio: 1;
+}
+
+.image-fit-cover {
+    object-fit: cover;
+}

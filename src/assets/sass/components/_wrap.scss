@@ -1,5 +1,5 @@
 .wrapper-content {
-    padding: var(--f7-wrapper-padding-top,0) var(--f7-wrapper-pading-right,0) var(--f7-wrapper-pading-bottom,0) var(--f7-wrapper-pading-left,0);
+    padding: var(--f7-wrapper-padding-top, 0) var(--f7-wrapper-pading-right, 0) var(--f7-wrapper-pading-bottom, 0) var(--f7-wrapper-pading-left, 0);
     box-sizing: border-box;
     position: relative;
     height: 100%;
@@ -14,8 +14,9 @@
             list-style: none;
             display: flex;
             li {
+                width: 55px;
                 img {
-                    max-width: 55px;
+                    width: 10%;
                 }
             }
         }
@@ -66,6 +67,7 @@
         left: 7%;
         bottom: 18%;
         width: 17%;
+        aspect-ratio: 125/171;
         img {
             width: 100%;
         }
@@ -97,8 +99,9 @@
     }
     .wrap-back {
         position: absolute;
-        bottom: 9%;
-        left: -2%;
+        bottom: 12%;
+        left: 0;
+        transform: translateX(calc(-50% + 10px));
         z-index: 10;
         width: 45px;
         height: 45px;
@@ -116,7 +119,7 @@
     }
     .wrap-next {
         position: absolute;
-        right: -5%;
+        right: -30px;
         bottom: 10%;
         height: 45px;
         line-height: 45px;

@@ -2,12 +2,13 @@ import { Button, Col, Input, Link, Page, Row } from 'framework7-react'
 import React from 'react'
 import NavbarCustom from '../../components/Navbar/NavbarCustom'
 import NavbarProfile from '../../components/Navbar/NavbarProfile'
+import { ImagesHelpers } from '../../helpers/ImagesHelpers'
 
 function Profile(props) {
   return (
-    <Page name="profile" noNavbar noToolbar>
+    <Page name="profile" noNavbar noToolbar style={{ backgroundImage: `url(${ImagesHelpers.BackgroundApp})` }}>
       <NavbarCustom {...props} />
-      <div className="wrapper-content">
+      <div className="wrapper-content pl-15px pr-15px">
         <div className="page-profile">
           <div className="profile-top">
             <img className='m-auto' src="/media/icon-app/ic_xin_chao.png" />

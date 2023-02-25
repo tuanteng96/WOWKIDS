@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { Icon, Page, PageContent, Sheet } from "framework7-react";
 import React, { useEffect, useRef, useState } from "react";
+import { DetectHelpers } from "../../helpers/DetectHelpers";
 
 var Acts = [
   {
@@ -177,10 +178,17 @@ function LessonsStart(props) {
       >
         <Icon f7="arrow_left" size="32px"></Icon>
       </div>
-      <div className="w-100 h-100 text-center">
-        <div className="h-100 d-inline-block position-relative">
+      <div className="w-100 h-100 text-center d--f jc--c ai--c">
+        <div
+          className={clsx(
+            "position-relative d-inline-block",
+            DetectHelpers.ResizeImageWindows(1920, 1080) ? "w-100" : "h-100"
+          )}
+        >
           <img
-            className="h-100"
+            className={clsx(
+              DetectHelpers.ResizeImageWindows(1920, 1080) ? "w-100" : "h-100"
+            )}
             src="https://wowedu.net/Upload/image/2021/09/21/tiet-1_2021-09-21-174420.png"
           />
           {Acts &&
@@ -216,7 +224,10 @@ function LessonsStart(props) {
               </div>
             ))}
           <div
-            className="btn-play-video clickSound"
+            className={clsx(
+              "btn-play-video clickSound",
+              DetectHelpers.ResizeImageWindows(1920, 1080) && "btn-play-video-x"
+            )}
             onClick={() => openVideos()}
           >
             <svg

@@ -3,6 +3,9 @@ import { Page, Link, Row, Col, f7 } from "framework7-react";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import NavbarCustom from "../../components/Navbar/NavbarCustom";
 import HomeLayout from "../../layout/HomeLayout";
+import { ImagesHelpers } from "../../helpers/ImagesHelpers";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import WrapperIcon from "../../components/Wrapper/WrapperIcon";
 
 const perfectScrollbarOptions = {
   wheelSpeed: 1,
@@ -31,27 +34,18 @@ const HomePage = (props) => {
       })
       .open();
   };
+
   return (
-    <Page name="home" noNavbar noToolbar>
+    <Page
+      name="home"
+      noNavbar
+      noToolbar
+      style={{ backgroundImage: `url(${ImagesHelpers.BackgroundApp})` }}
+    >
       <NavbarCustom {...props} />
       {/* Page content */}
       <HomeLayout>
-        <div className="wrapper-icon">
-          <ul>
-            <li>
-              <img src="/media/icon-app/ic_gt.png" />
-            </li>
-            <li>
-              <img src="/media/icon-app/ic_star.png" />
-            </li>
-            <li>
-              <img src="/media/icon-app/ic_age.png" />
-            </li>
-            <li>
-              <img src="/media/icon-app/ic_protect.png" />
-            </li>
-          </ul>
-        </div>
+        <WrapperIcon />
         <div className="wrapper-list">
           <div className="wrapper-title">Danh sách khóa học</div>
           <PerfectScrollbar
@@ -64,11 +58,12 @@ const HomePage = (props) => {
                   href="/lesson/1/"
                   className="clickSound learning-item fd--c mb-25px"
                 >
-                  <div className="learning-item__img">
-                    <img
-                      className="w-100"
-                      src="https://wowedu.net/Upload/image/2021/09/22/phong-tranh-xam-hai-tinh-duc_2021-09-22-090404.png"
+                  <div className="learning-item__img w-100 ratio-1-1">
+                    <LazyLoadImage
+                      className="w-100 ratio-1-1 image-fit-cover"
                       alt="Phòng tránh xâm hại tình dục"
+                      effect="blur"
+                      src="https://wowedu.net/Upload/image/2021/09/22/phong-tranh-xam-hai-tinh-duc_2021-09-22-090404.png"
                     />
                   </div>
                   <div className="learning-item__text">
@@ -81,11 +76,12 @@ const HomePage = (props) => {
                   onClick={() => checkLogin()}
                   className="clickSound learning-item fd--c mb-25px"
                 >
-                  <div className="learning-item__img">
-                    <img
-                      className="w-100"
-                      src="https://wowedu.net/Upload/image/2021/05/21/phong-tranh-duoi-nuoc_2021-05-21-155251.png"
+                  <div className="learning-item__img w-100 ratio-1-1">
+                    <LazyLoadImage
+                      className="w-100 ratio-1-1 image-fit-cover"
                       alt="Phòng tránh đuối nước"
+                      effect="blur"
+                      src="https://wowedu.net/Upload/image/2021/05/21/phong-tranh-duoi-nuoc_2021-05-21-155251.png"
                     />
                   </div>
                   <div className="learning-item__text">
@@ -98,11 +94,12 @@ const HomePage = (props) => {
                   href="/lesson/1/"
                   className="clickSound learning-item fd--c mb-25px"
                 >
-                  <div className="learning-item__img">
-                    <img
-                      className="w-100"
-                      src="https://wowedu.net/Upload/image/2021/05/21/phong-tranh-tntt-do-te-nga-va-vat-nhon_2021-05-21-155258.png"
+                  <div className="learning-item__img w-100 ratio-1-1">
+                    <LazyLoadImage
+                      className="w-100 ratio-1-1 image-fit-cover"
                       alt="Phòng tránh TNTT do té ngã và vật nhọn"
+                      effect="blur"
+                      src="https://wowedu.net/Upload/image/2021/05/21/phong-tranh-tntt-do-te-nga-va-vat-nhon_2021-05-21-155258.png"
                     />
                   </div>
                   <div className="learning-item__text">
@@ -115,11 +112,12 @@ const HomePage = (props) => {
                   href="/lesson/1/"
                   className="clickSound learning-item fd--c mb-25px"
                 >
-                  <div className="learning-item__img">
-                    <img
-                      className="w-100"
-                      src="https://wowedu.net/Upload/image/2021/05/21/phong-tranh-cac-benh-dich-lay-nhiem_2021-05-21-155334.png"
+                  <div className="learning-item__img w-100 ratio-1-1">
+                    <LazyLoadImage
+                      className="w-100 ratio-1-1 image-fit-cover"
                       alt="Phòng tránh các bệnh dịch lây nhiễm"
+                      effect="blur"
+                      src="https://wowedu.net/Upload/image/2021/05/21/phong-tranh-cac-benh-dich-lay-nhiem_2021-05-21-155334.png"
                     />
                   </div>
                   <div className="learning-item__text">
@@ -132,11 +130,12 @@ const HomePage = (props) => {
                   href="/lesson/1/"
                   className="clickSound learning-item fd--c mb-25px"
                 >
-                  <div className="learning-item__img">
-                    <img
-                      className="w-100"
-                      src="https://wowedu.net/Upload/image/2021/05/21/de-co-mot-co-the-khoe-manh_2021-05-21-155340.png"
+                  <div className="learning-item__img w-100 ratio-1-1">
+                    <LazyLoadImage
+                      className="w-100 ratio-1-1 image-fit-cover"
                       alt="Để có một cơ thể khỏe mạnh"
+                      effect="blur"
+                      src="https://wowedu.net/Upload/image/2021/05/21/de-co-mot-co-the-khoe-manh_2021-05-21-155340.png"
                     />
                   </div>
                   <div className="learning-item__text">
@@ -149,11 +148,12 @@ const HomePage = (props) => {
                   href="/lesson/1/"
                   className="clickSound learning-item fd--c mb-25px"
                 >
-                  <div className="learning-item__img">
-                    <img
-                      className="w-100"
-                      src="https://wowedu.net/Upload/image/2021/09/23/phong-tranh-chay-no_2021-09-23-084014.png"
+                  <div className="learning-item__img w-100 ratio-1-1">
+                    <LazyLoadImage
+                      className="w-100 ratio-1-1 image-fit-cover"
                       alt="Phòng tránh cháy nổ"
+                      effect="blur"
+                      src="https://wowedu.net/Upload/image/2021/09/23/phong-tranh-chay-no_2021-09-23-084014.png"
                     />
                   </div>
                   <div className="learning-item__text">Phòng tránh cháy nổ</div>
@@ -163,7 +163,11 @@ const HomePage = (props) => {
           </PerfectScrollbar>
         </div>
         <div className="wrap-icon-cate">
-          <img src="/media/icon-app/ic_giaotiepkheo.png" />
+          <LazyLoadImage
+            className="w-100 image-fit-cover"
+            effect="blur"
+            src={ImagesHelpers.Icon_GiaoTiepKheo}
+          />
         </div>
       </HomeLayout>
     </Page>

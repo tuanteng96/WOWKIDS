@@ -13,6 +13,7 @@ import 'framework7/css/bundle';
 
 // Import Icons and App Custom Styles
 import 'react-perfect-scrollbar/dist/css/styles.css';
+import "react-lazy-load-image-component/src/effects/blur.css";
 import '../css/icons.css';
 import '../css/app.scss';
 import '../assets/sass/style.app.scss';

@@ -1,22 +1,24 @@
-import React from 'react'
-import { Icon, Page } from 'framework7-react'
+import React from "react";
+import { Icon, Page } from "framework7-react";
+import clsx from "clsx";
+import { DetectHelpers } from "../../helpers/DetectHelpers";
 
 const getHeightView = (count) => {
   if (count <= 2) {
-    return '80%'
+    return "80%";
   } else if (count === 3) {
-    return '46%'
+    return "46%";
   } else {
-    return '50%'
+    return "50%";
   }
-}
+};
 
 function LessonsViews(props) {
-  const {f7router, f7route} = props
-  
+  const { f7router, f7route } = props;
+
   const handleClick = () => {
-    f7router.navigate(f7route.path + '1' + '/')
-  }
+    f7router.navigate(f7route.path + "1" + "/");
+  };
 
   return (
     <Page
@@ -31,10 +33,17 @@ function LessonsViews(props) {
       >
         <Icon f7="arrow_left" size="32px"></Icon>
       </div>
-      <div className="w-100 h-100 text-center">
-        <div className="h-100 d-inline-block position-relative">
+      <div className="w-100 h-100 text-center d--f jc--c ai--c">
+        <div
+          className={clsx(
+            "position-relative d-inline-block",
+            DetectHelpers.ResizeImageWindows(1920, 1080) ? "w-100" : "h-100"
+          )}
+        >
           <img
-            className="h-100"
+            className={clsx(
+              DetectHelpers.ResizeImageWindows(1920, 1080) ? "w-100" : "h-100"
+            )}
             src="https://wowedu.net/upload/image/2021/09/22/phong-tranh-xam-hai-tinh-duc_2021-09-22-090457.jpg"
           />
           <div
@@ -111,4 +120,4 @@ function LessonsViews(props) {
   );
 }
 
-export default LessonsViews
+export default LessonsViews;

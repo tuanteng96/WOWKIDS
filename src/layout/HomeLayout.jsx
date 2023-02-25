@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import React from "react";
+import { ImagesHelpers } from "../helpers/ImagesHelpers";
 
 function HomeLayout({ children }) {
   return (
@@ -21,7 +22,7 @@ function HomeLayout({ children }) {
               ? "h-100"
               : "w-100"
           )}
-          src="/media/icon-app/ic_may.png"
+          src={ImagesHelpers.BackgroundContent}
         />
         {children}
       </div>
