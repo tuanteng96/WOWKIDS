@@ -5,7 +5,6 @@ import {
   Swiper,
   SwiperSlide,
   Sheet,
-  PageContent,
 } from "framework7-react";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import NavbarCustom from "../../components/Navbar/NavbarCustom";

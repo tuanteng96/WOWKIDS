@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Icon, Page, PageContent, Sheet } from "framework7-react";
+import { Icon, Page, Sheet } from "framework7-react";
 import React, { useEffect, useRef, useState } from "react";
 import { DetectHelpers } from "../../helpers/DetectHelpers";
 

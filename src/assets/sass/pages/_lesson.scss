@@ -79,7 +79,7 @@
         pointer-events: none;
         .stroke-solid {
             stroke-dashoffset: 0;
-            stroke-dashArray: 300;
+            stroke-dasharray: 300;
             stroke-width: 3px;
             transition: stroke-dashoffset 1s ease, opacity 1s ease;
             stroke: #fff;
@@ -144,7 +144,7 @@
 @keyframes PlayCricle {
     0% {
         stroke-dashoffset: 0;
-        stroke-dashArray: 300;
+        stroke-dasharray: 300;
     }
     75% {
         opacity: 1;
@@ -152,6 +152,6 @@
     }
     100% {
         stroke-dashoffset: 0;
-        stroke-dashArray: 300;
+        stroke-dasharray: 300;
     }
 }

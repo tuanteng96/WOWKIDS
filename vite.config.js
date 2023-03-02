@@ -1,4 +1,3 @@
-
 import path from 'path';
 import reactRefresh from '@vitejs/plugin-react-refresh';
 
@@ -6,31 +5,41 @@ import reactRefresh from '@vitejs/plugin-react-refresh';
 
 const SRC_DIR = path.resolve(__dirname, './src');
 const PUBLIC_DIR = path.resolve(__dirname, './public');
-const BUILD_DIR = path.resolve(__dirname, './www',);
+const BUILD_DIR = path.resolve(__dirname, './www', );
 
 export default {
-  plugins: [
-    reactRefresh(),
+    plugins: [
+        reactRefresh(),
 
-  ],
-  root: SRC_DIR,
-  base: '',
-  publicDir: PUBLIC_DIR,
-  build: {
-    outDir: BUILD_DIR,
-    assetsInlineLimit: 0,
-    emptyOutDir: true,
-    rollupOptions: {
-      treeshake: false,
+    ],
+    root: SRC_DIR,
+    base: '',
+    publicDir: PUBLIC_DIR,
+    build: {
+        outDir: BUILD_DIR,
+        assetsInlineLimit: 0,
+        emptyOutDir: true,
+        rollupOptions: {
+            treeshake: false,
+            output: {
+                assetFileNames: (assetInfo) => {
+                    if (/\.css$/.test(assetInfo.name)) {
+                        return 'assets/css/[name][extname]'
+                    }
+                    return `assets/[name][extname]`;
+                },
+                chunkFileNames: 'assets/js/[name].js',
+                entryFileNames: 'assets/js/[name].js',
+            }
+        },
     },
-  },
-  resolve: {
-    alias: {
-      '@': SRC_DIR,
+    resolve: {
+        alias: {
+            '@': SRC_DIR,
+        },
     },
-  },
-  server: {
-    host: true,
-  },
+    server: {
+        host: true,
+    },
 
 };
